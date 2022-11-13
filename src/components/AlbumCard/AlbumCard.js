@@ -30,14 +30,14 @@ const AlbumCard = React.forwardRef((props, ref) => {
     (e) => {
       addToFavorites(data.id, e.target.checked);
     },
-    [addToFavorites]
+    [addToFavorites, data]
   );
 
   const handleAddToQueueChange = useCallback(
     (e) => {
       addToQueue(data.id, e.target.checked);
     },
-    [addToQueue]
+    [addToQueue, data]
   );
 
   const handleAlbumClick = useCallback(

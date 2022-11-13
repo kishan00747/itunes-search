@@ -1,6 +1,9 @@
 # iTunes Search App
 
 This project is developed by [kishan00747](https://github.com/kishan00747)  
+Github repo [here](https://github.com/kishan00747/itunes-search/tree/master)
+Working live app [here](https://master--stirring-begonia-335692.netlify.app/)
+
 It was bootstrapped with [Create React App](https://github.com/facebook/create-react-app)
 
 ## Features of this App
@@ -8,12 +11,15 @@ It was bootstrapped with [Create React App](https://github.com/facebook/create-r
 - Displays top 100 albums based on the json feed here: https://itunes.apple.com/us/rss/topalbums/limit=100/json
 
 - Functional Features:
+
   - Searching on the dataset using album title, name, artist.
-  - Allows to see details of an album on click.
+  - See details of an album with just a click.
   - Category Filter, Release Date Filter.
-  - Favorite Albums.
-  - Add albums to a Queue.
+  - Supports "Favorites" feature and favorites can be viewed using the filters bar.
+  - Add albums to a Queue and view the queue in a clean drawer UI.
   - Supports a cool dark mode.
+  - Auto-detects dark mode if dark mode is enabled in the browser.
+
 - Non-functional Features:
   - Responsive Layout
   - Built using React Hooks and uses custom hooks as well.
