@@ -1,7 +1,9 @@
 # iTunes Search App
 
-This project is developed by [kishan00747](https://github.com/kishan00747)  
+This project is developed by [kishan00747](https://github.com/kishan00747)
+
 Github repo [here](https://github.com/kishan00747/itunes-search/tree/master)
+
 Working live app [here](https://master--stirring-begonia-335692.netlify.app/)
 
 It was bootstrapped with [Create React App](https://github.com/facebook/create-react-app)
