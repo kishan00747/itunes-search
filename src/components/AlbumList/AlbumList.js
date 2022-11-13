@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useMemo, useRef } from "react";
+import React, { useCallback, useEffect, useRef } from "react";
 import AlbumCard from "../AlbumCard/AlbumCard";
 import styles from "./AlbumList.module.scss";
 import classnames from "classnames";
@@ -18,9 +18,12 @@ function AlbumList(props) {
     showRank = false,
   } = props;
 
-  const handleAlbumClick = useCallback((e, albumId) => {
-    onAlbumClick(albumId);
-  }, []);
+  const handleAlbumClick = useCallback(
+    (e, albumId) => {
+      onAlbumClick(albumId);
+    },
+    [onAlbumClick]
+  );
 
   const cardsRef = useRef([]);
 

@@ -1,10 +1,4 @@
-import React, {
-  useCallback,
-  useEffect,
-  useMemo,
-  useRef,
-  useState,
-} from "react";
+import React, { useCallback, useMemo } from "react";
 import styles from "./AlbumCard.module.scss";
 import classnames from "classnames";
 import Checkbox from "@mui/material/Checkbox";
@@ -32,18 +26,25 @@ const AlbumCard = React.forwardRef((props, ref) => {
 
   const finalImage = useMemo(() => Object.values(image)[2], [image]);
 
-  const handleFavoriteChange = useCallback((e) => {
-    addToFavorites(data.id, e.target.checked);
-  }, []);
-  const handleAddToQueueChange = useCallback((e) => {
-    addToQueue(data.id, e.target.checked);
-  }, []);
+  const handleFavoriteChange = useCallback(
+    (e) => {
+      addToFavorites(data.id, e.target.checked);
+    },
+    [addToFavorites]
+  );
+
+  const handleAddToQueueChange = useCallback(
+    (e) => {
+      addToQueue(data.id, e.target.checked);
+    },
+    [addToQueue]
+  );
 
   const handleAlbumClick = useCallback(
     (e) => {
       onClick(e, data.id, data);
     },
-    [data]
+    [onClick, data]
   );
 
   return (

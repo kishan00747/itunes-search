@@ -26,12 +26,15 @@ import dayjs from "dayjs";
 function AlbumsFilters(props) {
   const { setFilters, categories, filters } = props;
 
-  const handleSearchChange = useCallback((searchTerm) => {
-    setFilters({
-      ...filters,
-      searchTerm: searchTerm,
-    });
-  }, []);
+  const handleSearchChange = useCallback(
+    (searchTerm) => {
+      setFilters({
+        ...filters,
+        searchTerm: searchTerm,
+      });
+    },
+    [setFilters, filters]
+  );
 
   const handleOnlyFavoritesChange = useCallback(
     (e) => {
@@ -40,7 +43,7 @@ function AlbumsFilters(props) {
         onlyFavorites: e.target.checked,
       });
     },
-    [filters]
+    [setFilters, filters]
   );
 
   const handleFiltersChange = useCallback(
@@ -50,7 +53,7 @@ function AlbumsFilters(props) {
         ...newFilters,
       });
     },
-    [filters]
+    [setFilters, filters]
   );
 
   const handleFiltersClear = useCallback(() => {
@@ -58,7 +61,7 @@ function AlbumsFilters(props) {
       searchTerm: filters.searchTerm,
       onlyFavorites: filters.onlyFavorites,
     });
-  }, [filters]);
+  }, [setFilters, filters]);
 
   return (
     <div className={classnames("card", styles.albumsFilterWrapper)}>
@@ -193,12 +196,12 @@ const OtherFilters = React.memo((props) => {
       },
     });
     toggleDrawer();
-  }, [selectedCategories, releaseDate, toggleDrawer]);
+  }, [selectedCategories, releaseDate, toggleDrawer, onApply]);
 
   const onFiltersClear = useCallback(() => {
     onClear();
     toggleDrawer();
-  }, [selectedCategories, toggleDrawer]);
+  }, [selectedCategories, toggleDrawer, onClear]);
 
   const filtersActive = useMemo(
     () => appliedFilters.releaseDate && appliedFilters.categories,

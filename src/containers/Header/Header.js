@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useCallback, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import MusicNoteIcon from "@mui/icons-material/MusicNote";
 import classnames from "classnames";
@@ -18,7 +18,7 @@ function Header() {
     } else {
       dispatch(changeTheme(THEMES.DARK));
     }
-  }, [theme]);
+  }, [dispatch, theme]);
 
   useEffect(() => {
     // Checking for dark theme in browser
@@ -28,7 +28,7 @@ function Header() {
     ) {
       dispatch(changeTheme(THEMES.DARK));
     }
-  }, []);
+  }, [dispatch]);
 
   return (
     <header className={classnames(styles.itunesSearchHeader)}>
