@@ -1,0 +1,106 @@
+.albumsWrapper {
+    padding: 1.5rem;
+    color: var(--text-color);
+    
+    .albumsLoadingWrapper {
+        display: flex;
+        min-height: 50vh;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .albumsFilterWrapper {
+        margin: 1rem 0;
+        display: flex;
+        align-items: center;
+        position: sticky;
+        top: 3.5rem;
+        z-index: 20;
+        background-color: var(--primary-color);
+        color: var(--text-color);
+    }
+
+    .searchFilter {
+        display: flex;
+        flex: 1;
+    }
+
+    .searchInput {
+        flex: 1;
+        color: var(--text-color);
+    }
+
+    .otherFiltersBadge {
+        background-color: var(--accent-color);
+    }
+
+}
+
+.otherFiltersContainer {
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    
+
+    .filterListWrapper {
+        width: 100%;
+        margin: 1rem 0;
+        > legend {
+            color: var(--text-color);
+            margin-bottom: 1rem;
+        }
+    }
+
+    .categoryFilterList {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        gap: 0 1rem;
+        
+    }
+
+    .categoryFilterListItem {
+        flex-basis: calc(50% - 2rem);
+    }
+
+    .releaseDateFilter {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        gap: 0 1rem;
+        margin-top: 1rem;
+        color: var(--text-color);
+       
+    }
+
+    .otherFiltersActions {
+        margin: 1rem 0;
+    }
+
+}
+
+.datePicker {
+    label, input {
+        color: var(--text-color);
+    }
+}
+
+.queueAlbumList {
+    padding: 0.5rem 2rem;
+    max-width: 200px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    min-height: calc(100vh - 1rem);
+    overflow: scroll;
+}
+
+.queueFab {
+    &:hover, &:focus {
+        filter: brightness(1.1);
+    }
+}
+
+

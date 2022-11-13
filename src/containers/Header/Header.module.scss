@@ -1,0 +1,30 @@
+.itunesSearchHeader {
+    padding: 1rem 1.5rem;
+    height: 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 30;
+    background-color: var(--primary-color-dark);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: flex;
+    align-items: center;
+
+
+    .headerLogo {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        font-size: 1.6rem;
+
+        > svg {
+            font-size: 1.6rem;
+            margin-right: 0.5rem;
+        }
+    }
+
+    .headerActions {
+        margin-left: auto;
+        display: flex;
+    }
+}

@@ -1,0 +1,116 @@
+:root {
+    --primary-color-dark: #94B5C0;
+    --primary-color: #F4F9F9;
+    --primary-color-light: #FF6363;
+    --accent-color: #96C7C1;
+    --background-color: var(--off-white);
+    --white: #FEFEFE;
+    --black: #101010;
+    --off-white: #FAF9F6;
+    --soft-black: #232B2B;
+    --gray: #393E46; 
+    --red: #DA0037;
+    --green: #519872;
+    --text-color: var(--gray); 
+    --icon-color: var(--gray);  
+    font-size: 16px;
+
+    &.theme-dark {
+        --primary-color-dark: #261C2C;
+        --primary-color: #3E2C41;
+        --primary-color-light: #5C527F;
+        --accent-color: #6E85B2;
+        --text-color: var(--off-white);
+        --icon-color: var(--off-white);   
+        --background-color: var(--primary-color-dark); 
+    }
+}
+
+
+.itunes-search-app {
+    min-height: 100vh;
+    
+
+    font-size: 1rem;
+    font-family: 'Lato';
+    color: var(--text-color);
+    background-color: var(--background-color);
+
+    
+
+    .itunes-search-app-body {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+// Common Styles 
+
+.text-ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.card {
+    border-radius: 0.7rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transition: all ease-in 0.3s;
+
+    &__grow:hover {
+        transform: scale(1.025);
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+}
+
+.btn-primary {
+    background-color: var(--accent-color);
+}
+
+svg {
+    color: var(--icon-color);
+}
+
+label, input {
+    color: var(--text-color);
+}
+
+.color-primary {
+    color: var(--primary-color);
+}
+
+.color-accent {
+    color: var(--accent-color);
+}
+
+.color-red {
+    color: var(--red);
+}
+
+.color-green {
+    color: var(--green);
+}
+
+
+// Responsive Styles
+
+@media screen and (max-width: 1200px) {
+    :root {
+      font-size: calc(6px + calc(100vw / 120));
+    }
+
+}
+
+@media screen and (max-width: 992px) {
+    .itunes-search-app {
+        .itunes-search-app-body {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    :root {
+      font-size: 16px;
+    }
+}

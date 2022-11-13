@@ -1,0 +1,90 @@
+.albumDetailWrapper {
+    padding: 2rem;
+    display: flex;
+    gap: 2rem;
+    color: var(--text-color);
+    background-color: var(--background-color);
+
+    .albumDetailImg {
+        flex-basis: 20%;
+        max-width: 200px;
+        min-width: 100px;
+        width: 100%;
+        height: auto;
+        position: relative;
+
+        > img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .albumDetailInfo {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    // .albumDetailCategories {
+    //     margin-bottom: auto;
+    // }
+
+    .albumDetailCategoryChip {
+        padding: 0.4rem;
+        height: auto;
+        border-radius: 0.4rem;
+        font-size: 0.7rem;
+        background-color: var(--primary-color-light);
+        > span {
+            padding: 0;
+            color: var(--text-color);
+        }
+    }
+
+    .albumDetailSubInfo {
+        font-size: 0.8rem;
+    }
+
+    .albumDetailItemCount {
+        margin-top: auto;
+    }
+
+    .albumDetailName {
+        font-weight: 700;
+        font-size: 1.2rem;
+
+    }
+
+    .albumDetailArtist {
+        font-size: 1rem;
+        // margin-bottom: 1rem;
+    }
+
+    .albumDetailFooter {
+        
+    }
+
+    .albumDetailActions {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .albumDetailActionItem {
+        padding: 0rem;
+    }
+
+    .albumDetailBadge {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        &__badge {
+            background-color: var(--accent-color);
+            padding: 1rem;
+            font-size: 1rem;
+            font-weight: 700;
+        }
+    }
+}
