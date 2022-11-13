@@ -201,7 +201,7 @@ const OtherFilters = React.memo((props) => {
   const onFiltersClear = useCallback(() => {
     onClear();
     toggleDrawer();
-  }, [selectedCategories, toggleDrawer, onClear]);
+  }, [toggleDrawer, onClear]);
 
   const filtersActive = useMemo(
     () => appliedFilters.releaseDate && appliedFilters.categories,
