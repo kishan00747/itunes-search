@@ -12,10 +12,10 @@ It was bootstrapped with [Create React App](https://github.com/facebook/create-r
 - Functional Features:
 
   - Searching on the dataset using album title, name, artist.
-  - Allows to see details of an album on click.
+  - See details of an album with just a click.
   - Category Filter, Release Date Filter.
-  - Favorite Albums.
-  - Add albums to a Queue.
+  - Supports "Favorites" feature and favorites can be viewed using the filters bar.
+  - Add albums to a Queue and view the queue in a clean drawer UI.
   - Supports a cool dark mode.
   - Auto-detects dark mode if dark mode is enabled in the browser.
 
