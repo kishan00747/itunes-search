@@ -11,7 +11,7 @@ import Badge from "@mui/material/Badge";
 import LazyLoadImage from "../LazyLoadImage/LazyLoadImage";
 import PLACEHOLDER_IMAGE from "../../assets/album_img_placeholder.png";
 
-function AlbumDetails(props) {
+function AlbumDetail(props) {
   const {
     data,
     className,
@@ -20,19 +20,25 @@ function AlbumDetails(props) {
     addToFavorites = () => {},
     addToQueue = () => {},
     showRank = false,
-    onClick = () => {},
   } = props;
   const { name, image, artist, category, itemCount, releaseDate, price, rank } =
     data;
 
   const finalImage = useMemo(() => Object.values(image)[2], [image]);
 
-  const handleFavoriteChange = useCallback((e) => {
-    addToFavorites(data.id, e.target.checked);
-  }, []);
-  const handleAddToQueueChange = useCallback((e) => {
-    addToQueue(data.id, e.target.checked);
-  }, []);
+  const handleFavoriteChange = useCallback(
+    (e) => {
+      addToFavorites(data.id, e.target.checked);
+    },
+    [addToFavorites, data]
+  );
+
+  const handleAddToQueueChange = useCallback(
+    (e) => {
+      addToQueue(data.id, e.target.checked);
+    },
+    [addToQueue, data]
+  );
 
   return (
     <div className={classnames(styles.albumDetailWrapper, className)}>
@@ -105,4 +111,4 @@ function AlbumDetails(props) {
   );
 }
 
-export default AlbumDetails;
+export default AlbumDetail;

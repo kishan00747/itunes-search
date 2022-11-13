@@ -25,7 +25,7 @@ function LazyLoadImage(props) {
     return () => {
       lazyLoadObs.disconnect();
     };
-  }, []);
+  }, [offsetMargin]);
 
   const onImageLoad = useCallback(() => {
     setImageLoaded(true);
@@ -34,6 +34,7 @@ function LazyLoadImage(props) {
   return (
     <>
       <img
+        alt=""
         {...imgProps}
         ref={(ref) => {
           imageRef.current = ref;
@@ -47,6 +48,7 @@ function LazyLoadImage(props) {
       />
       {imageLoaded !== undefined && (
         <img
+          alt=""
           {...imgProps}
           style={
             imageLoaded

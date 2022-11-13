@@ -16,7 +16,7 @@ const albumTransformConfig = {
     },
     id: {
       transformFn: (value) => {
-        const { attributes, label } = value;
+        const { attributes } = value;
         return attributes["im:id"];
       },
     },

@@ -4,13 +4,11 @@ import { getAlbums } from "../apis/albums";
 import {
   setAlbums,
   updateFilters,
-  updateSearchTerm,
   addToFavorites as favoriteInStore,
   addToQueue as addToQueueInStore,
   updateSelectedAlbum,
 } from "../store/features/albums.slice";
 import {
-  selectAlbumList,
   selectAlbumMap,
   selectCategories,
   selectFavorites,
@@ -76,23 +74,35 @@ export default function useAlbums() {
     };
 
     fetchAlbums();
-  }, []);
+  }, [dispatch]);
 
-  const setFilters = useCallback((newFilters) => {
-    dispatch(updateFilters(newFilters));
-  }, []);
+  const setFilters = useCallback(
+    (newFilters) => {
+      dispatch(updateFilters(newFilters));
+    },
+    [dispatch]
+  );
 
-  const setSelectedAlbum = useCallback((newFilters) => {
-    dispatch(updateSelectedAlbum(newFilters));
-  }, []);
+  const setSelectedAlbum = useCallback(
+    (newFilters) => {
+      dispatch(updateSelectedAlbum(newFilters));
+    },
+    [dispatch]
+  );
 
-  const addToFavorites = useCallback((albumId, checked) => {
-    dispatch(favoriteInStore({ albumId, favorite: checked }));
-  }, []);
+  const addToFavorites = useCallback(
+    (albumId, checked) => {
+      dispatch(favoriteInStore({ albumId, favorite: checked }));
+    },
+    [dispatch]
+  );
 
-  const addToQueue = useCallback((albumId, checked) => {
-    dispatch(addToQueueInStore({ albumId, add: checked }));
-  }, []);
+  const addToQueue = useCallback(
+    (albumId, checked) => {
+      dispatch(addToQueueInStore({ albumId, add: checked }));
+    },
+    [dispatch]
+  );
 
   const getAlbum = useCallback(
     (albumId) => {

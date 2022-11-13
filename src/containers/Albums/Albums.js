@@ -1,4 +1,4 @@
-import React, { useCallback, useMemo, useState } from "react";
+import React, { useCallback, useState } from "react";
 import CircularProgress from "@mui/material/CircularProgress";
 import useAlbums from "../../hooks/useAlbums";
 import classnames from "classnames";
@@ -35,7 +35,7 @@ function Albums(props) {
 
   const closeDrawer = useCallback(() => {
     setSelectedAlbum(null);
-  }, []);
+  }, [setSelectedAlbum]);
 
   const toggleQueueDrawer = useCallback(
     (value) => () => {
